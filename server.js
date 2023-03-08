@@ -1,17 +1,13 @@
+// Declarações
 const express = require('express');
 const cors = require('cors');
 const api = express();
-const port = 3000;
-const router = express.Router();
-// const routes = require('./routes');
+const routes = require('./routes');
 
+// Execução
 api.use(cors());
 api.use(express.json());
 api.use(express.urlencoded({ extended: true }));
-router.get("/", (req, resp)=> resp.json({
-    mensagem: 'API Online...'
-}));
-api.use("/", router);
-// api.use("/api", routes);
-api.listen(port);
-console.log("Run API Express");
+api.use('/', routes);
+api.listen(process.env.PORT || 3000);
+console.log('Run API Express');
