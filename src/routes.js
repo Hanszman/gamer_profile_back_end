@@ -7,5 +7,5 @@ routes.get('/', (req, res) => {
     return res.json('API Online!');
 });
 
-// Exportações
+// Exportação
 module.exports = routes;
