@@ -1,11 +1,11 @@
-// Declarações
+// Declarations
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const api = express();
 const routes = require('./src/routes');
 
-// Execução
+// Execution
 api.use(cors());
 api.use(express.json());
 api.use(express.urlencoded({ extended: true }));

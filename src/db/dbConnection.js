@@ -1,4 +1,4 @@
-// Conexão
+// Connection
 const Knex = require('knex')({
     client: process.env.DB_CLIENT || 'mysql',
     connection: {
@@ -10,5 +10,5 @@ const Knex = require('knex')({
     }
 });
 
-// Exportação
+// Exportation
 module.exports = Knex;
